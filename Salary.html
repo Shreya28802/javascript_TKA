@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   div {
+       
+    background-color: lightblue;
+    border: 5px solid black;
+    padding-left :100px;
+    padding-right:100px;
+display:inline-block;
+    }
+</style>
+
+<body>
+    <div>
+      <h1 style="color:red"> Employee Salary  Details </h1>  
+    <script>
+ var basic_salary=parseInt(prompt("Enter basic salary"))  ;
+var hra,ta,bonus,netsalary;
+if(basic_salary>=10000){
+    var hra=basic_salary*0.01;
+    var ta=basic_salary*0.08;
+    var bonus=15000;
+    netsalary=basic_salary+hra+ta+bonus;
+   document.write(`<h2 style='color:green' >Basic Salary of Employee:${basic_salary}</h2>`);
+
+   document.write(`<h2 style='color:green'>HRA of Employee:${hra}</h2>`)
+    document.write(` <h2 style='color:green' >Travaling  of Allowanace Employee:${ta}</h2>`)
+ document.write(` <h2 style='color:green' >Bonus of Employee:${bonus}</h2>`)
+document.write(` <h2 style='color:green' >Net Salary of Employee:${netsalary}<h2>`)
+    console.log(`BAsic Salary of Employee:${basic_salary}`)
+    console.log(`HRA of Employee:${hra}`)
+    console.log(`Travelling  of Allownace Employee:${ta}`)
+    console.log(`Bonus of Employee:${bonus}`)
+    console.log(`Net Salary of Employee:${netsalary}`)
+}
+else{
+    var hra=700;
+    var  ta=500;
+    var bonus=900;
+    document.write(`<h2 style='color:green' >HRA of Employee:${hra}</h2>`)
+    document.write(` <h2 style='color:green' >Travaling  of Allownace:${ta}</h2>`)
+ document.write(`<h2 style='color:green' >Bonus of Employee:${bonus}<h2>`)
+
+    console.log(`HRA OF Employee:${hra}`)
+    console.log(`Travelling  of Allownace Employee:${ta}`)
+    console.log(`Bonus of Employee:${bonus}`)
+}
+
+
+
+    </script>
+    </div>
+</body>
+</html>

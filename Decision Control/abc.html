@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess board with Multiplication</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            height: 300px;
+        }
+        table tr td {
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createChessBoardWithMultiplication(rangeStart, rangeEnd) {
+            var i, j;
+            document.write(`<table border=3>`);
+            for (i = 1; i <= 8; i++) {
+                document.write(`<tr>`);
+                if (i === 1) {
+                    for (j = 1; j <= 8; j++) {
+                        document.write(`<td style='background-color:black; color:white'></td>`);
+                    }
+                } else if (i === 2) {
+                    for (j = 1; j <= 8; j++) {
+                        document.write(`<td style='background-color:white'></td>`);
+                    }
+                } else {
+                    for (j = 1; j <= 8; j++) {
+                        if (i % 2 === 0) {
+                            if (j % 2 !== 0) {
+                                document.write(`<td style='background-color:white'></td>`);
+                            } else {
+                                document.write(`<td style='background-color:black; color:white'></td>`);
+                            }
+                        } else {
+                            if (j % 2 !== 0) {
+                                document.write(`<td style='background-color:black; color:white'></td>`);
+                            } else {
+                                document.write(`<td style='background-color:white'></td>`);
+                            }
+                        }
+                    }
+                }
+                document.write(`</tr>`);
+            }
+            document.write(`</table><br><br>`);
+            
+            document.write(`<table border=3>`);
+            for (i = rangeStart; i <= rangeEnd; i++) {
+                document.write(`<tr>`);
+                for (j = 1; j <= 10; j++) {
+                    document.write(`<td>${i} x ${j} = ${i * j}</td>`);
+                }
+                document.write(`</tr>`);
+            }
+            document.write(`</table>`);
+        }
+
+        // Call the function with your desired range
+        createChessBoardWithMultiplication(5, 10);
+    </script>
+</body>
+</html>
